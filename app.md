@@ -8,7 +8,7 @@ But : Gestion d'une base de donnée mongoDB (CRUD complet) d'information liées 
 |Je veux|Afin de|
 |---|---|
 |Afficher les collections de la bdd||
-|Afficher les documents d'une collection||
+|Afficher les documents d'une collection particulière||
 |Créer une collection||
 |Modifier une collection||
 |Supprimer une collection||
@@ -16,6 +16,15 @@ But : Gestion d'une base de donnée mongoDB (CRUD complet) d'information liées 
 |Modifier un document||
 |Supprimer un document||
 |Lancer un quizz sur la collection countries||
+
+## router
+
+|Endpoint|Méthode|But|
+|---|---|---|
+|/collections|GET|Retourne toutes les collections|
+|/collection/:name|GET|Retourne tous les documents d'une collection|
+|/collection/create|POST| Créer une nouvelle collection|
+|
 
 ## mongoDB
 
