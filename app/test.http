@@ -6,4 +6,4 @@ GET {{ endpoint }}collection/countries
 
 ### getOneDocumentByName
 
-GET {{ endpoint }}collection/Countries/france
+GET {{ endpoint }}collection/Countries/allemagne
