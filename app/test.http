@@ -1,0 +1,9 @@
+@endpoint = http://localhost:4000/
+
+### getAllDocuments
+
+GET {{ endpoint }}collection/countries
+
+### getOneDocumentByName
+
+GET {{ endpoint }}collection/Countries/france
