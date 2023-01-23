@@ -7,3 +7,15 @@ GET {{ endpoint }}collection/countries
 ### getOneDocumentByName
 
 GET {{ endpoint }}collection/Countries/allemagne
+
+### addNewDocument
+POST {{endpoint}}collection/countries
+content-type: application/json
+
+{
+  "name": "Espagne",
+  "capitalCity": "Madrid",
+  "population": "47.42M",
+  "officialLanguage" : "Espagnol ou Castillan",
+  "continent": "Europe"
+}

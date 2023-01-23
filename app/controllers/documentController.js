@@ -19,4 +19,12 @@ module.exports = {
     const result = await models.document.findDocumentByName(collectionName, documentName);
     res.json(result);
   },
+
+  async addNewDocument(req, res) {
+    let { collectionName } = req.params;
+    collectionName = minimizeFirstLetter(collectionName);
+    const newDocument = { ...req.body };
+    const result = await models.document.createDocument(collectionName, newDocument);
+    res.json(result);
+  },
 };

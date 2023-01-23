@@ -1,3 +1,3 @@
-const collectionController = require('./collectionController');
+const documentController = require('./documentController');
 
-module.exports = { collectionController };
+module.exports = { documentController };

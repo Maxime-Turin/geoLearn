@@ -1,11 +1,13 @@
 const express = require('express');
-const { collectionController } = require('../controllers');
+const { documentController } = require('../controllers');
 
 const router = express.Router();
 
 router.route('/collection/:collectionName')
-  .get(collectionController.getAllDocuments);
+  .get(documentController.getAllDocuments)
+  .post(documentController.addNewDocument);
 
 router.route('/collection/:collectionName/:documentName')
-  .get(collectionController.getOneDocumentByName);
+  .get(documentController.getOneDocumentByName);
+
 module.exports = router;

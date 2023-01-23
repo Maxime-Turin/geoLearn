@@ -12,4 +12,10 @@ module.exports = {
     const result = await collection.find({ name: documentName }).toArray();
     return result;
   },
+
+  async createDocument(collec, newDocument) {
+    const collection = db.collection(`${collec}`);
+    const result = await collection.insertOne(newDocument);
+    return result;
+  },
 };

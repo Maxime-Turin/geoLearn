@@ -3,7 +3,7 @@
 But : Gestion d'une base de donnée mongoDB (CRUD complet) d'information liées à la géographie.
 
 ## User Stories
-> "En tant que" inutil, usage uniquement personnel.
+> "En tant que" inutile, usage uniquement personnel.
 
 |Je veux|Afin de|
 |---|---|
