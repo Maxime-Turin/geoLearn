@@ -1,4 +1,5 @@
 const { db } = require('../clients/mongoDB');
+const { updateOneDocument } = require('../controllers/documentController');
 
 module.exports = {
   async findAllDocuments(collec) {
@@ -22,6 +23,15 @@ module.exports = {
   async deleteDocument(collec, documentName) {
     const collection = db.collection(`${collec}`);
     const result = await collection.deleteOne(documentName);
+    return result;
+  },
+
+  async updateDocument(collec, documentName, modifiedDocument) {
+    const collection = db.collection(`${collec}`);
+    const result = await collection.updateOne(
+      { name: documentName },
+      { $set: modifiedDocument },
+    );
     return result;
   },
 };

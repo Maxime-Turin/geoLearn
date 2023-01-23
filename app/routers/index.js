@@ -9,6 +9,7 @@ router.route('/collection/:collectionName')
   .delete(documentController.deleteDocument);
 
 router.route('/collection/:collectionName/:documentName')
-  .get(documentController.getOneDocumentByName);
+  .get(documentController.getOneDocumentByName)
+  .post(documentController.updateOneDocument);
 
 module.exports = router;

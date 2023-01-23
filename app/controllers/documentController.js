@@ -36,4 +36,15 @@ module.exports = {
     const result = await models.document.deleteDocument(collectionName, documentToDelete);
     res.json(result);
   },
+
+  async updateOneDocument(req, res) {
+    let { collectionName, documentName } = req.params;
+    // Adapte les premières lettre au "modèle" de la bdd
+    collectionName = minimizeFirstLetter(collectionName);
+    documentName = capitalizeFirstLetter(documentName);
+    const modifiedDocument = { ...req.body };
+    const result = await models.document
+      .updateDocument(collectionName, documentName, modifiedDocument);
+    res.json(result);
+  },
 };

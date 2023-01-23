@@ -20,6 +20,18 @@ content-type: application/json
   "continent": "Europe"
 }
 
+### updateOneDocument
+POST {{endpoint}}collection/countries/espagne
+content-type: application/json
+
+{
+  "name": "Espagne",
+  "capitalCity": "Bidule",
+  "population": "47.42M",
+  "officialLanguage" : "Espanish",
+  "continent": "Europe du chud"
+}
+
 ### deleteDocument
 DELETE {{endpoint}}collection/countries
 content-type: application/json
