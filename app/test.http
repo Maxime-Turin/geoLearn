@@ -19,3 +19,11 @@ content-type: application/json
   "officialLanguage" : "Espagnol ou Castillan",
   "continent": "Europe"
 }
+
+### deleteDocument
+DELETE {{endpoint}}collection/countries
+content-type: application/json
+
+{
+  "name": "Espagne"
+}

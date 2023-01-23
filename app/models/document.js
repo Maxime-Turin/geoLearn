@@ -18,4 +18,10 @@ module.exports = {
     const result = await collection.insertOne(newDocument);
     return result;
   },
+
+  async deleteDocument(collec, documentName) {
+    const collection = db.collection(`${collec}`);
+    const result = await collection.deleteOne(documentName);
+    return result;
+  },
 };

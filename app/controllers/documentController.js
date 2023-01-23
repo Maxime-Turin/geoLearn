@@ -27,4 +27,13 @@ module.exports = {
     const result = await models.document.createDocument(collectionName, newDocument);
     res.json(result);
   },
+
+  async deleteDocument(req, res) {
+    let { collectionName } = req.params;
+    collectionName = minimizeFirstLetter(collectionName);
+    // Récupération du nom du document
+    const documentToDelete = { ...req.body };
+    const result = await models.document.deleteDocument(collectionName, documentToDelete);
+    res.json(result);
+  },
 };
