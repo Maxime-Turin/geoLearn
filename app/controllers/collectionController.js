@@ -6,7 +6,6 @@ module.exports = {
     const newCollection = req.body.name;
     const collectionName = capitalizeFirstLetter(newCollection);
     const result = await models.collection.createCollection(collectionName);
-    console.log(result.collectionName);
     res.json(result.collectionName);
   },
 

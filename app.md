@@ -48,6 +48,13 @@ Exemple d'un document de la collection countries :
 2. De quelle pays "capitalCity" est elle la capitale
     + 4 réponses possibles "name"
 
+## Wireframes
+
+1. Listes des pays
+    + [Wireframe]()
+2. Affichage d'un pays
+    + [Wireframe](https://wireframe.cc/eWyDXu)
+
 ## Dependencies 
 + Express
 + Dotenv
