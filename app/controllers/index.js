@@ -1,3 +1,4 @@
 const documentController = require('./documentController');
+const collectionController = require('./collectionController');
 
-module.exports = { documentController };
+module.exports = { documentController, collectionController };

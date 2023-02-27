@@ -1,5 +1,5 @@
 const express = require('express');
-const { documentController } = require('../controllers');
+const { documentController, collectionController } = require('../controllers');
 
 const router = express.Router();
 
@@ -11,5 +11,10 @@ router.route('/collection/:collectionName')
 router.route('/collection/:collectionName/:documentName')
   .get(documentController.getOneDocumentByName)
   .post(documentController.updateOneDocument);
+
+router.route('/collection')
+  .get(collectionController.getAllCollections)
+  .post(collectionController.createOneCollection)
+  .delete(collectionController.deleteCollection);
 
 module.exports = router;

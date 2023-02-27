@@ -1,3 +1,4 @@
 const document = require('./document');
+const collection = require('./collection');
 
-module.exports = { document };
+module.exports = { document, collection };

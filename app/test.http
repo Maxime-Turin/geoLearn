@@ -6,7 +6,7 @@ GET {{ endpoint }}collection/countries
 
 ### getOneDocumentByName
 
-GET {{ endpoint }}collection/Countries/allemagne
+GET {{ endpoint }}collection/Countries/espagne
 
 ### addNewDocument
 POST {{endpoint}}collection/countries
@@ -39,3 +39,24 @@ content-type: application/json
 {
   "name": "Espagne"
 }
+
+### newCollection
+POST {{endpoint}}collection
+content-type: application/json
+
+{
+  "name": "testultime"
+}
+
+### GetAllCollections
+GET {{ endpoint }}collection
+
+### deleteCollection
+
+DELETE {{endpoint}}collection
+content-type: application/json
+
+{
+  "name": "1z"
+}
+

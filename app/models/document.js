@@ -1,5 +1,4 @@
 const { db } = require('../clients/mongoDB');
-const { updateOneDocument } = require('../controllers/documentController');
 
 module.exports = {
   async findAllDocuments(collec) {
