@@ -6,7 +6,7 @@ GET {{ endpoint }}collection/countries
 
 ### getOneDocumentByName
 
-GET {{ endpoint }}collection/Countries/espagne
+GET {{ endpoint }}collection/Countries/test
 
 ### addNewDocument
 POST {{endpoint}}collection/countries
