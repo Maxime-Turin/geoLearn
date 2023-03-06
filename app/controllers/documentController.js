@@ -24,6 +24,9 @@ module.exports = {
     let { collectionName } = req.params;
     collectionName = minimizeFirstLetter(collectionName);
     const newDocument = { ...req.body };
+    Object.keys(newDocument).forEach((value) => {
+      newDocument[value] = capitalizeFirstLetter(newDocument[value]);
+    });
     const result = await models.document.createDocument(collectionName, newDocument);
     res.json(result);
   },
@@ -33,6 +36,7 @@ module.exports = {
     collectionName = minimizeFirstLetter(collectionName);
     // Récupération du nom du document
     const documentToDelete = { ...req.body };
+    console.log(documentToDelete);
     const result = await models.document.deleteDocument(collectionName, documentToDelete);
     res.json(result);
   },

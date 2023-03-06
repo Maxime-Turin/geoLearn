@@ -17,6 +17,7 @@ const app = {
       oneCountry.textContent = country.name;
       oneCountry.classList.add('country-name');
       oneCountry.addEventListener('click', () => app.showCountry(country.name));
+
       li.appendChild(oneCountry);
       countriesList.appendChild(li);
     });
@@ -34,7 +35,6 @@ const app = {
     mainDiv.innerHTML = '';
     const response = await fetch(`http://localhost:4000/collection/countries/${countryName}`);
     const country = await response.json();
-    console.log(country);
     const countryCard = document.createElement('article');
     mainDiv.appendChild(countryCard);
     const countryDetails = {
@@ -55,7 +55,32 @@ const app = {
     modifyButton.setAttribute('href', '#');
     modifyButton.innerText = 'Modifier';
     modifyButton.addEventListener('click', app.modifyCountry);
+    const deleteButton = document.createElement('a');
+    deleteButton.setAttribute('role', 'button');
+    deleteButton.setAttribute('href', '#');
+    deleteButton.classList.add('secondary');
+    deleteButton.innerText = 'Supprimer';
+    deleteButton.addEventListener('click', app.deleteCountry);
     countryCard.appendChild(modifyButton);
+    countryCard.appendChild(deleteButton);
+    deleteButton.addEventListener('click', (event) => app.deleteCountry(event, country[0].name));
+  },
+
+  async deleteCountry(event, countryName) {
+    event.preventDefault();
+    const countryToDelete = {
+      name: countryName,
+    };
+    console.log(JSON.stringify(countryToDelete));
+    const response = await fetch('http://localhost:4000/collection/countries', {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: {
+        name: JSON.stringify(countryToDelete),
+      },
+    });
   },
 
   showAddCountryForm() {
@@ -67,7 +92,7 @@ const app = {
         <label for="name">
         <input type="text" id="name" name="name" placeholder="Nom" value="Test" >
         </label>
-
+        
         <label for="capitalCity">
         <input type="text" id="capitalCity" name="capitalCity" placeholder="Capitale" value="test" >
         </label>
@@ -105,10 +130,7 @@ const app = {
       },
       body: formDataJson,
     });
-    console.log(response.json());
-  },
-
-  modifyCountry() {
+    this.showCountry(formDataToObject.name);
   },
 
   // Event list
@@ -120,7 +142,3 @@ const app = {
 };
 
 document.addEventListener('DOMContentLoaded', app.init);
-
-//! CAPITALIZE LES ENTREES 
-
-;:;: 
