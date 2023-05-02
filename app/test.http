@@ -6,7 +6,7 @@ GET {{ endpoint }}collection/countries
 
 ### getOneDocumentByName
 
-GET {{ endpoint }}collection/Countries/test
+GET {{ endpoint }}collection/Countries/Espagne
 
 ### addNewDocument
 POST {{endpoint}}collection/countries
@@ -21,7 +21,7 @@ content-type: application/json
 }
 
 ### updateOneDocument
-POST {{endpoint}}collection/countries/espagne
+POST {{endpoint}}collection/countries/Espagne
 content-type: application/json
 
 {
@@ -37,7 +37,7 @@ DELETE {{endpoint}}collection/countries
 content-type: application/json
 
 {
-  "name": "Test"
+  "name": "Espagne"
 }
 
 ### newCollection
