@@ -65,19 +65,19 @@ const app = {
       html:
       `<form class='add-country'>
         <label for="name">
-        <input type="text" id="name" name="name" placeholder="Nom" value="Test" >
+        <input type="text" id="name" name="name" placeholder="Nom" value="Nom" >
         </label>
 
         <label for="capitalCity">
-        <input type="text" id="capitalCity" name="capitalCity" placeholder="Capitale" value="test" >
+        <input type="text" id="capitalCity" name="capitalCity" placeholder="Capitale" value="Capital" >
         </label>
 
         <label for="continent">
-        <input type="text" id="continent" name="continent" placeholder="Continent" value="test" >
+        <input type="text" id="continent" name="continent" placeholder="Continent" value="Continent" >
         </label>
 
         <label for="population">
-        <input type="text" id="population" name="population" placeholder="Population" value="test" >
+        <input type="text" id="population" name="population" placeholder="Population" value="Population" >
         </label>
 
         <label for="officialLanguage">
@@ -122,5 +122,3 @@ const app = {
 document.addEventListener('DOMContentLoaded', app.init);
 
 //! CAPITALIZE LES ENTREES 
-
-;:;: 
